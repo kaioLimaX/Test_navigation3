@@ -1,4 +1,4 @@
-package com.skymobile.test_navigation3
+package com.skymobile.test_navigation3.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

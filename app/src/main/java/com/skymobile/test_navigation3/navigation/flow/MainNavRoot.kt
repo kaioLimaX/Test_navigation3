@@ -3,6 +3,7 @@ package com.skymobile.test_navigation3.navigation.flow
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.navigation3.ui.NavDisplay
+import com.skymobile.test_navigation3.navigation.utils.LocalFlowBack
 import com.skymobile.test_navigation3.navigation.utils.Navigator
 import org.koin.compose.koinInject
 import org.koin.compose.navigation3.koinEntryProvider

@@ -4,6 +4,7 @@ import com.skymobile.test_navigation3.navigation.flow.MainNavRoot
 import com.skymobile.test_navigation3.navigation.flow.PortfolioNavRoot
 import com.skymobile.test_navigation3.navigation.utils.Navigator
 import com.skymobile.test_navigation3.navigation.destinations.RootDestination
+import com.skymobile.test_navigation3.navigation.destinations.portfolio.rootNavigator
 import org.koin.core.annotation.KoinExperimentalAPI
 import org.koin.core.qualifier.named
 import org.koin.dsl.module

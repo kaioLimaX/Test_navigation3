@@ -1,4 +1,4 @@
-package com.skymobile.test_navigation3.navigation.flow
+package com.skymobile.test_navigation3.navigation.utils
 
 import androidx.compose.runtime.staticCompositionLocalOf
 

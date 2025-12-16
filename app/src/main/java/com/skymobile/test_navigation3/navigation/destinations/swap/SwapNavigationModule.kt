@@ -1,9 +1,8 @@
-package com.skymobile.test_navigation3.navigation.swap
+package com.skymobile.test_navigation3.navigation.destinations.swap
 
 
-import com.skymobile.test_navigation3.Screen
-import com.skymobile.test_navigation3.Screen2
-import com.skymobile.test_navigation3.navigation.flow.LocalFlowBack
+import com.skymobile.test_navigation3.ui.Screen
+import com.skymobile.test_navigation3.ui.Screen2
 import com.skymobile.test_navigation3.navigation.utils.Navigator
 import org.koin.core.annotation.KoinExperimentalAPI
 import org.koin.core.qualifier.named

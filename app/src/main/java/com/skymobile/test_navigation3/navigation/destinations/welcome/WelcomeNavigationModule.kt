@@ -1,8 +1,7 @@
-package com.skymobile.test_navigation3.di.navigationModules
+package com.skymobile.test_navigation3.navigation.destinations.welcome
 
-import com.skymobile.test_navigation3.Screen
+import com.skymobile.test_navigation3.ui.Screen
 import com.skymobile.test_navigation3.navigation.utils.Navigator
-import com.skymobile.test_navigation3.navigation.destinations.WelcomeDestination
 import org.koin.core.annotation.KoinExperimentalAPI
 import org.koin.core.qualifier.named
 import org.koin.dsl.module

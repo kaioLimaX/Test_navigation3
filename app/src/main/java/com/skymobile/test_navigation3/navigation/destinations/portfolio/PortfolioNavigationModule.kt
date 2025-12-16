@@ -1,9 +1,8 @@
-package com.skymobile.test_navigation3.di.navigationModules
+package com.skymobile.test_navigation3.navigation.destinations.portfolio
 
-import androidx.compose.runtime.Composable
-import com.skymobile.test_navigation3.Screen
+import com.skymobile.test_navigation3.ui.Screen
 import com.skymobile.test_navigation3.navigation.utils.Navigator
-import com.skymobile.test_navigation3.navigation.destinations.PortfolioDestination
+
 import com.skymobile.test_navigation3.navigation.destinations.RootDestination
 import org.koin.core.qualifier.named
 import org.koin.java.KoinJavaComponent.getKoin
@@ -12,7 +11,7 @@ import org.koin.dsl.module
 import org.koin.dsl.navigation3.navigation
 
 @OptIn(KoinExperimentalAPI::class)
-val mainNavigationModule = module {
+val portfolioNavigationModule = module {
 
     single(named("Main")) {
         Navigator(startDestination = PortfolioDestination.Home)

@@ -18,7 +18,7 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.navigation3.ui.NavDisplay
 import com.skymobile.test_navigation3.R
-import com.skymobile.test_navigation3.navigation.destinations.PortfolioDestination
+import com.skymobile.test_navigation3.navigation.destinations.portfolio.PortfolioDestination
 import com.skymobile.test_navigation3.navigation.utils.Navigator
 import org.koin.compose.koinInject
 import org.koin.compose.navigation3.koinEntryProvider

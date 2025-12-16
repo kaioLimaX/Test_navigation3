@@ -1,4 +1,4 @@
-package com.skymobile.test_navigation3.navigation.swap
+package com.skymobile.test_navigation3.navigation.destinations.swap
 
 import kotlinx.serialization.Serializable
 
