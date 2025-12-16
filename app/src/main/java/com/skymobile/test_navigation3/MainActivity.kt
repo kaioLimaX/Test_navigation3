@@ -4,21 +4,19 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.skymobile.test_navigation3.navigation.NavRoot
-import com.skymobile.test_navigation3.ui.theme.Test_navigation3Theme
+import com.skymobile.test_navigation3.navigation.flow.NavRoot
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContent { NavRoot()
+        val startWelcome = intent.getBooleanExtra(
+            "MAIN",
+            false
+        )
+
+        setContent {
+            NavRoot(startWelcome)
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.skymobile.test_navigation3.navigation
+package com.skymobile.test_navigation3.navigation.flow
 
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
@@ -18,6 +18,8 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.navigation3.ui.NavDisplay
 import com.skymobile.test_navigation3.R
+import com.skymobile.test_navigation3.navigation.destinations.PortfolioDestination
+import com.skymobile.test_navigation3.navigation.utils.Navigator
 import org.koin.compose.koinInject
 import org.koin.compose.navigation3.koinEntryProvider
 import org.koin.core.annotation.KoinExperimentalAPI
@@ -25,18 +27,16 @@ import org.koin.core.qualifier.named
 
 @OptIn(KoinExperimentalAPI::class)
 @Composable
-fun MainNavRoot() {
+fun PortfolioNavRoot() {
     val bottomBarItems = mutableListOf(
-        BottomBarItem("Home", painterResource(R.drawable.ic_home), MainDestination.Home),
-        BottomBarItem("Profile", painterResource(R.drawable.ic_profile), MainDestination.Profile),
-        BottomBarItem("Settings", painterResource(R.drawable.ic_settings), MainDestination.Settings),
+        BottomBarItem("Home", painterResource(R.drawable.ic_home), PortfolioDestination.Home),
+        BottomBarItem("Profile", painterResource(R.drawable.ic_profile), PortfolioDestination.Profile),
+        BottomBarItem("Settings", painterResource(R.drawable.ic_settings), PortfolioDestination.Settings),
     )
     val entryProvider = koinEntryProvider()
     val navigator = koinInject<Navigator>(named("Main"))
 
     var selectedItem by remember { mutableStateOf(bottomBarItems.first()) }
-
-
 
     Scaffold(
         contentWindowInsets = WindowInsets(),
@@ -46,7 +46,7 @@ fun MainNavRoot() {
                 selectedItem = selectedItem,
                 onItemSelected = {
                     selectedItem = it
-                    navigator.navigateTo(it.destination)
+                    navigator.replaceStack(it.destination)
                 }
             )
         }
@@ -57,7 +57,7 @@ fun MainNavRoot() {
                 .fillMaxSize()
                 .padding(paddingValues),
             backStack = navigator.backstack,
-            onBack = { navigator.goBack() },
+            onBack = { navigator.popBackStack() },
             entryProvider = entryProvider
         )
     }
@@ -67,7 +67,7 @@ fun MainNavRoot() {
 data class BottomBarItem(
     val label: String,
     val icon: Painter,
-    val destination: MainDestination
+    val destination: PortfolioDestination
 )
 
 @Composable

@@ -1,9 +1,10 @@
-package com.skymobile.test_navigation3.di
+package com.skymobile.test_navigation3.navigation.swap
 
 
 import com.skymobile.test_navigation3.Screen
-import com.skymobile.test_navigation3.navigation.Navigator
-import com.skymobile.test_navigation3.navigation.SwapDestination
+import com.skymobile.test_navigation3.Screen2
+import com.skymobile.test_navigation3.navigation.flow.LocalFlowBack
+import com.skymobile.test_navigation3.navigation.utils.Navigator
 import org.koin.core.annotation.KoinExperimentalAPI
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
@@ -17,7 +18,7 @@ val swapNavigationModule = module {
     }
 
     navigation<SwapDestination.SwapAmount> {
-        Screen(
+        Screen2(
             title = "Swap Amount",
             onClick = {
                 get<Navigator>(named("Swap"))
@@ -27,7 +28,7 @@ val swapNavigationModule = module {
     }
 
     navigation<SwapDestination.SwapTo> {
-        Screen(
+        Screen2(
             title = "Swap To",
             onClick = {
                 get<Navigator>(named("Swap"))
